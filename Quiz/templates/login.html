@@ -1,0 +1,6 @@
+<form method="POST" action=".">{% csrf_token %}
+    <input type="text" class="form-control roundedInp" id="username" name="username" placeholder="User ID" autocomplete="username" onblur="this.placeholder = 'User ID'" value="{{username}}" autofocus/>
+<input type="password" class="form-control roundedInp" id="password" name="password" placeholder="Password" autocomplete="off" name="password"  onblur="this.placeholder = 'Password'" value="{{password}}" />
+
+    <button type="submit" class="btn login-btn">Submit</button>
+</form>

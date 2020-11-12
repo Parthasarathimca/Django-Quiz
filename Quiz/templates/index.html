@@ -1,0 +1,25 @@
+<h1> Welcome to Quiz </h1>
+
+{% for each_question in quiz %}
+<h4>{{each_question.id}}. {{each_question.quistion}} ?</h4>
+    
+    <input type='radio' id="option1" name="{{each_question.id}}" value="{{each_question.option1}}"> {{each_question.option1}} <br>
+    <input type='radio' id="option2" name="{{each_question.id}}" value="{{each_question.option2}}"> {{each_question.option2}} <br>
+    <input type='radio' id="option3" name="{{each_question.id}}" value="{{each_question.option3}}"> {{each_question.option3}} <br>
+    <input type='radio' id="option4" name="{{each_question.id}}" value="{{each_question.option4}}"> {{each_question.option4}} <br>
+
+    <h3 id="answer" style="display: none;color: green;" id="answer" value="{{each_question.answer}}">Answer :{{each_question.option4}}</h3>
+
+{% endfor  %}
+
+<br><br><br>
+<input type="submit" onclick="showAnswer()">
+
+<script>
+    function showAnswer(){
+        document.getElementById("answer").style.display = "block";
+
+    }
+</script>
+
+
